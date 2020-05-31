@@ -15,12 +15,9 @@ class Solution {
     }
 public:
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        ios_base::sync_with_stdio(false);
-        cin.tie(NULL);
-        cout.tie(NULL);
         
         vector<vector<int>> adj(numCourses);
-        //Make adjacency matrix (Directed graph)
+        
         for(int i=0;i<prerequisites.size();++i)
             adj[prerequisites[i][0]].push_back(prerequisites[i][1]);
         
